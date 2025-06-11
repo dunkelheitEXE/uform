@@ -1,138 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Sign up</title>
-</head>
-<style>
-    .bg-indigo-600 {
-        background-color: #4f46e5; /* Indigo 600 */
-    }
-    .bg-dark-soft {
-        background-color: #2c2d33;
-    }
-</style>
-<body class="bg-dark-soft" data-bs-theme="dark">
-    <nav class="navbar navbar-light bg-dark fixed-top" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/hub_50dp_F3F3F3_FILL0_wght400_GRAD0_opsz48.svg" alt="">Uform</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-                class="offcanvas offcanvas-end"
-                tabindex="-1"
-                id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel"
-            >
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                        Offcanvas
-                    </h5>
-                    <button
-                        type="button"
-                        class="btn-close text-reset"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close"
-                    ></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a
-                                class="nav-link active"
-                                aria-current="page"
-                                href="#"
-                                >Home</a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/signup">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                id="dropdownId"
-                                data-bs-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                                >Dropdown</a
-                            >
-                            <div
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownId"
-                            >
-                                <a class="dropdown-item" href="#"
-                                    >Action 1</a
-                                >
-                                <a class="dropdown-item" href="#"
-                                    >Action 2</a
-                                >
-                            </div>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input
-                            class="form-control me-2"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                        />
-                        <button class="btn btn-outline-success" type="submit">
-                            Search
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <br><br><br>
-    
-    <form class="mb-3 mx-auto" style="max-width: 60%;">
-        <legend>Sign up</legend>
+<form class="mb-3 mx-auto" style="max-width: 60%;" method="post" action="/signup">
+    <legend>Sign up</legend>
+    <div class="mb-3">
         <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
+            <label for="name" class="form-label">Name</label>
             <input
-                type="email"
+                type="text"
                 class="form-control"
-                name="email"
-                id="email"
-                aria-describedby="emailHelpId"
-                placeholder="abc@mail.com"
+                name="name"
+                id="name"
+                placeholder="Your name"
             />
         </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">password</label>
-            <input
-                type="password"
-                class="form-control"
-                name="password"
-                id="password"
-                aria-describedby="emailHelpId"
-                placeholder="abc@mail.com"
-            />
-            <small id="passwordHelp" class="form-text text-muted"
-                >Your password is hashed for your security</small
-            >
-        </div>
-        <button
-            type="submit"
-            class="btn btn-success"
-        >
-            Submit
-        </button>
         
-    </form>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            aria-describedby="emailHelpId"
+            placeholder="abc@mail.com"
+        />
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">password</label>
+        <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            aria-describedby="emailHelpId"
+            placeholder="123"
+        />
+        <small id="passwordHelp" class="form-text text-muted"
+            >Your password is hashed for your security</small
+        >
+    </div>
+    <button
+        type="submit"
+        class="btn btn-success"
+    >
+        Submit
+    </button>
     
-    <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+</form>
+
+<script src="js/bootstrap.min.js"></script>
