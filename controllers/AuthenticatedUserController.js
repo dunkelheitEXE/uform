@@ -9,6 +9,7 @@ const create = (req, res) => {
 const store = (req, res) => {
     const {email, password} = req.body;
     const request = model.findByEmail(email);
+    console.log(request);
     res.redirect("/");
 };
 

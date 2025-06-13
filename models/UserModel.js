@@ -15,9 +15,10 @@ const findByEmail = (email, callback) => {
     db.query('SELECT * FROM users WHERE email = ?', [email],
         (err, res) => {
             if(err) {
-                return callback(err);
+                console.error(err)
+                return null;
             }
-            
+            return res[0];
         }
     );
 };
